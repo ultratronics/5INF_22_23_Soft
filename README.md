@@ -1,4 +1,4 @@
-# 5INF_22_23_Soft
+# 5INF Software (2022-2023)
 
 Hier kan je extra oefeningen en lesmateriaal vinden.
 
