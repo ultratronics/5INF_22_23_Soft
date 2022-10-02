@@ -11,6 +11,8 @@ Variabelen
 Types
 Loops
 Conditionals (if-then)
+https://cs50.tf/ap/2023/lessons/1/#topics
+
 
 ## Hoofdstuk 2 Arrays
 
@@ -18,3 +20,4 @@ Onderwerpen
 Arrays
 Strings
 Command-Line Arguments
+https://cs50.tf/ap/2023/lessons/2/#topics
