@@ -1,5 +1,9 @@
 
+
+
 #include <stdio.h>
+char emptyChar = ' ';
+
 
 int wieIsAanDeBeurt = 0; //2 spelers
 char bord[6][7]; //bord
@@ -9,7 +13,7 @@ void initialiseerBord(){
 
 for (int i = 0; i < 6; i++) {
  for (int j = 0; j < 7; j++) {
-   bord[i][j] = 'L';
+   bord[i][j] = emptyChar;
    //printf("%c\n",bord[i][j] );
  }
 }
@@ -20,7 +24,7 @@ for (int i = 0; i < 6; i++) {
 int jeton(int kolom){
 
   for (int i = 5; i >= 0; i--) {
-    if (bord[i][kolom] == 'L') {
+    if (bord[i][kolom] == emptyChar) {
 
 
 
@@ -68,9 +72,23 @@ while(1){
 // Vragen voor input
 printf("Waar wil je een jeton ingooien?\n");
 int waarde;
-scanf("%i",&waarde);
+
+
+int isHetEenGetal = scanf("%i",&waarde);
+//printf("%d", waarde);
+while((waarde > 7 || waarde < 1) && !isHetEenGetal){
+
+    printf("dit gaat niet\n");
+    printf("Waar wil je een jeton ingooien?\n");
+    int c;
+    do c = getchar(); while (c != EOF && c != '\n');
+    isHetEenGetal = scanf("%i",&waarde);
+}
+
 jeton(waarde-1); //kolom 3 , tellen vanaf 0
 printt();
+
+
 }
 
   return 0;
